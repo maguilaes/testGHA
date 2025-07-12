@@ -35,3 +35,4 @@ jobs:
         echo "GITHUB_REF: ${{ github.ref }}"
         echo "GITHUB_SHA: ${{ github.sha }}"
         echo "GITHUB_EVENT_NAME: ${{ github.event_name }}"
+        echo "GITHUB_ACTOR: ${{ github.actor }}"
