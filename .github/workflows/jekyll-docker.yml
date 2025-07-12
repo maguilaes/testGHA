@@ -22,8 +22,16 @@ jobs:
       run: echo "Hello DevOps World!"
 
     - name: "I'm showing ENV"
-      if: ${{ env.platform == 'asure' }}      
+      if: ${{ env.platform == 'azure' }}      
       run: |
         echo "This is the Azure value: ${{ env.platform }}"
         echo "This is de region: ${{ env.region }}"
         echo "My Account ID: ${{ env.account }}"
+
+    - name: "Mostrando variables por defecto"
+      run: |
+        echo "GITHUB_WORKSPACE: ${{ github.workspace }}"
+        echo "GITHUB_REPOSITORY: ${{ github.repository }}"
+        echo "GITHUB_REF: ${{ github.ref }}"
+        echo "GITHUB_SHA: ${{ github.sha }}"
+        echo "GITHUB_EVENT_NAME: ${{ github.event_name }}"
