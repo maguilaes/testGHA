@@ -22,6 +22,7 @@ jobs:
       run: echo "Hello DevOps World!"
 
     - name: "I'm showing ENV"
+      if: ${{ env.platform == 'asure' }}      
       run: |
         echo "This is the Azure value: ${{ env.platform }}"
         echo "This is de region: ${{ env.region }}"
